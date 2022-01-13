@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>父页面给子页面传递参数</title>
+</head>
+<body>
+<script type="text/javascript">
+    function AfterDocumentOpened() {
+        var userName = window.external.UserParams;
+        document.getElementById("userName").value = userName;
+    }
+</script>
+<div>
+    <font color="red">父页面传递过来的参数:</font><input type="text" id="userName" name="userName"/>
+</div>
+<div style="width:auto; height:670px;" th:utext="${pageoffice}">
+</div>
+
+</body>
+
+
+</html>

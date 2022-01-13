@@ -1,0 +1,56 @@
+<html>
+<head>
+    <title>Word模板列表</title>
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel='stylesheet' type='text/css' href='dialog.css'>
+    <script language=javascript>
+        function CheckValue(theForm) {
+            var mObject = window.dialogArguments;
+            mObject.SelectValue = theForm.WordList.value;
+            window.close();
+            return;
+        }
+    </SCRIPT>
+</head>
+<body bgcolor="menu">
+<form name="FormSelect">
+    <table border=0 cellspacing='0' cellpadding='0' width=100% height=100% align=center>
+        <tr>
+            <td align=center>
+                <table border=0 cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td align=left nowrap></td>
+                        <td align=left nowrap class="TDStyle">请选择您要使用的word模板</td>
+                    </tr>
+                    <tr>
+                        <td align=right nowrap class="TDStyle"></td>
+                        <td><select name=WordList style='width:240 px;'>
+                            <option value='redhead01.doc'>公司公文模板</option>
+                            <option value='redhead02.doc'>政府红头文件模板</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td align=left nowrap></td>
+                        <td class="TDStyle">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align=center>
+                <input class=button type=button value="  确定  " onclick="CheckValue(FormSelect);">
+                <input class=button type=button value="  取消  " onclick="window.close();">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+  

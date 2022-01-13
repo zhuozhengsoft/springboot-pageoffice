@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>印章/签名列表</title>
+    <META HTTP-EQUIV="pragma" CONTENT="no-cache">
+    <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+    <link rel='stylesheet' type='text/css' href='dialog.css'>
+    <script language=javascript>
+        function CheckValue(theForm) {
+            var mObject = window.dialogArguments;
+            mObject.SelectValue = theForm.WordList.value;
+            window.close();
+            return;
+        }
+    </script>
+</head>
+<body bgcolor="menu">
+<form name="FormSelect">
+    <table border=0 cellspacing='0' cellpadding='0' width=100% height=100% align=center>
+        <tr>
+            <td align=center>
+                <table border=0 cellspacing='0' cellpadding='0'>
+                    <tr>
+                        <td align=left nowrap></td>
+                        <td align=left nowrap class="TDStyle">请选择您要加盖的电子印章</td>
+                    </tr>
+                    <tr>
+                        <td align=right nowrap class="TDStyle"></td>
+                        <td><select name=WordList style='width:240 px;'>
+                            <option value='seal01.esf'>公司行政章</option>
+                            <option value='seal02.esf'>某某市政府章</option>
+                            <option value='seal03.esf'>个人私章</option>
+                            <option value='sign01.esf'>刘总签名－正式场合</option>
+                            <option value='sign02.esf'>刘总签名－普通场合</option>
+                            <option value='sign03.esf'>个人签名</option>
+                        </select></td>
+                    </tr>
+                    <tr>
+                        <td align=left nowrap></td>
+                        <td class="TDStyle">&nbsp;</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td align=center>
+                <input class=button type=button value="  确定  " onclick="CheckValue(FormSelect);">
+                <input class=button type=button value="  取消  " onclick="window.close();">
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
+  
+  
+  
+  
+  
+  
+  

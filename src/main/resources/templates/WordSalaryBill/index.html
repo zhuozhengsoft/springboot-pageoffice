@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>动态生成工资条</title>
+    <!--pageoffice.js文件一定要引用  -->
+    <script type="text/javascript" src="../pageoffice.js"></script>
+    <script type="text/javascript">
+        function getID() {
+            var ids = "";
+            for (var i = 1; i < 11; i++) {
+                if (document.getElementById("check" + i.toString()).checked) {
+                    ids += i.toString() + ",";
+                }
+            }
+
+            if (ids == "")
+                alert("请先选择要生成工资条的记录");
+            else
+                location.href = "javascript:POBrowser.openWindowModeless('Compose?ids=" + ids.substr(0, ids.length - 1) + " ', 'width=1200px;height=800px;');";
+        }
+
+    </script>
+</head>
+<body>
+<div style="text-align: center;">
+    <p style="color: Red; font-size: 14px;">
+        1.可以点击“操作”栏中的“编辑”来编辑各个员工的工作条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+        2.可以点击“操作”栏中的“查看”来查看各个员工的工作条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br/>
+        3.可选择多条工资记录，点“生成工资条”按钮，生成工资条&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</p>
+    <table
+            style="width: 60%; font-size: 12px; text-align: center; border: solid 1px #a2c5d9;" th:utext="${strHtmls}">
+
+    </table>
+    <br/>
+    <input type="button" value="生成工资条" onclick="getID()"/>
+</div>
+</body>
+</html>

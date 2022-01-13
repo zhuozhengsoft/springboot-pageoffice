@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>POBrowser方式打开Word文档</title>
+
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <!--PageOffice.js和jquery.min.js文件一定要引用-->
+    <script type="text/javascript" src="/jquery.min.js"></script>
+    <script type="text/javascript" src="/pageoffice.js" id="po_js_main"></script>
+    <script type="text/javascript">
+        var count = 0;
+
+        function updateCount(value) {
+            count = count + value;
+            document.getElementById("Text1").value = count;
+            return count.toString();
+        }
+
+    </script>
+</head>
+
+<body>
+<a href="javascript:POBrowser.openWindowModeless('Word?id=123', 'width=1200px;height=800px;scroll=no;');">POBrowser方式打开Word文档</a><br><br><br>
+<div>Count=<input id="Text1" type="text" value="0"/></div>
+
+</body>
+</html>

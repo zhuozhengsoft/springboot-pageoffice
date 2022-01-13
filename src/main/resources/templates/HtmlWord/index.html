@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>使用静态页面集成pageoffice</title>
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="this is my page">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <script type="text/javascript" src="/jquery.min.js"></script>
+
+</head>
+
+<body>
+
+<input type="button" value="打开文档" id="btn1" onclick="OpenDocument('Word?param1=123')"/>
+<div style=" width:auto; height:700px;" id="divDocView">
+</div>
+
+<script type="text/javascript">
+
+
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+
+    function AfterDocumentOpened() {
+
+        $("#btn1").removeAttr("disabled");
+    }
+
+
+    function OpenDocument(strUrl) {
+        //使打开按钮变灰
+        $('#btn1').attr('disabled', 'true');
+        //使用post请求打开文档的action
+        $.post(strUrl, {param2: "456"}, function (data) {
+            $("#divDocView").html(data);
+        });
+    }
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta charset="utf-8">
+    <title>CommentOnly</title>
+</head>
+<body style="overflow:hidden">
+
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+
+    function newComment() {
+        var docSel = document.getElementById("PageOfficeCtrl1").Document.Application.Selection;
+        docSel.Comments.Add(docSel.Range);
+    }
+
+</script>
+
+</div>
+<div style=" width:1100px; height:800px;" th:utext="${pageoffice}">
+
+</div>
+
+</body>
+
+</html>

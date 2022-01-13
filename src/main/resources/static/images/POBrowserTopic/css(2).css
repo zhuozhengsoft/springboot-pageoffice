@@ -1,0 +1,129 @@
+body {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    background-color: #FFFFFF;
+    margin: 5px;
+    padding: 5px;
+}
+
+table {
+    font-family: "Verdana", "Arial", "Helvetica", "sans-serif";
+    font-size: 12px;
+    color: #000000;
+
+}
+
+input {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    background-color: #F7F7F7;
+    border: 1px solid #CCCCCC;
+}
+
+.font1 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    color: #666666;
+    text-decoration: none;
+}
+
+.font2 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #336666;
+    text-decoration: none;
+    padding-top: 6px;
+    padding-right: 0px;
+    padding-bottom: 0px;
+    padding-left: 3px;
+}
+
+.font4 {
+    font-size: 12px;
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.font5 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.duan1 {
+    line-height: 20px;
+    padding-top: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    padding-left: 5px;
+    font-family: "����";
+    font-size: 12px;
+}
+
+.font3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding-top: 5px;
+    background-color: #DBDBDB;
+}
+
+.font6 {
+    font-size: 12px;
+    color: #FF6600;
+    text-decoration: none;
+}
+
+.font7 {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+    font-size: 10px;
+    color: #999999;
+    text-decoration: none;
+}
+
+select {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+}
+
+.TxtParaph {
+    font-size: 12px;
+    color: #000000;
+    text-decoration: none;
+    line-height: 2;
+}
+
+.XYDataGrid1-table-header-tr {
+    color: #000000;
+    background-color: #F3F3F3;
+    font-weight: bold;
+    FONT-SIZE: 9pt;
+    TEXT-ALIGN: center
+}
+
+.XYDataGrid1-table {
+    FONT-SIZE: 9pt;
+    border-style: Ridge;
+    border-width: 1px;
+}
+
+.XYDataGrid1-header-cell {
+    FONT-SIZE: 9pt;
+}
+
+.XYDataGrid1-data-cell {
+    FONT-SIZE: 9pt;
+}
+
+.XYDataGrid1-table-data-tr {
+    FONT-SIZE: 9pt;
+    LINE-HEIGHT: 18pt;
+    BACKGROUND-COLOR: #FFFFFF
+}

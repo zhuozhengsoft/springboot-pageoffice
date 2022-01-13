@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>在word文档中光标处插入分页符</title>
+
+</head>
+<body>
+<script type="text/javascript">
+    function InsertPageBreak() {
+        document.getElementById("PageOfficeCtrl1").RunMacro("AddPage", "sub AddPage() \r\n Application.Selection.InsertBreak(7) \r\n End Sub");
+    }
+
+</script>
+<div style="font-size: 12px; line-height: 20px; border-bottom: dotted 1px #ccc; border-top: dotted 1px #ccc;
+        padding: 5px;">
+    <span style="color: red;">操作说明：</span>手动定位光标到当前文档中要插入分页符的位置，然后点“插入分页符”的按钮。<br/>
+    关键代码：点右键，选择“查看源文件”，看js函数<span style="background-color: Yellow;">InsertPageBreak()</span>
+</div>
+<div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+</div>
+</body>
+
+</html>

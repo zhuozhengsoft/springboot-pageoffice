@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>演示：后台编程插入图片到数据区域(专业版、企业版)</title>
+
+</head>
+<body>
+<div style="font-size: 12px; line-height: 20px; border-bottom: dotted 1px #ccc; border-top: dotted 1px #ccc;
+        padding: 5px;">
+    关键代码：<span style="background-color: Yellow;"> <br/>DataRegion dataRegion
+            = worddoc.openDataRegion("PO_开头的书签名称");
+            <br/>
+            dataRegion.setValue("[image]doc/1.jpg[/image]");</span><br/>
+</div>
+<br/>
+<form id="form1" style="height: 100%;">
+    <div style="height: 700px; width: auto;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+
+</html>

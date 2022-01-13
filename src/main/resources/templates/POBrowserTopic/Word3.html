@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>主页面传递参数到子页面</title>
+
+
+    <script type="text/javascript">
+        function Save() {
+            document.getElementById("PageOfficeCtrl1").WebSave();
+            window.external.close();
+        }
+    </script>
+</head>
+<body>
+
+获取index.html中第一个文本框中的值：</br>
+代码：String txt=(String)session.getAttribute("txt");</br>
+输出：<span th:utext="${txt}"></span></br></br>
+<form id="form1">
+    <div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+
+</html>

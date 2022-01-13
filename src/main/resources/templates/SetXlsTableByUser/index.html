@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>登录页面</title>
+</head>
+<body>
+<form id="form1" action="Excel" method="get">
+    <div style=" text-align:center;">
+        <div>请选择登录用户：</div>
+        <br/>
+        <select name="userName">
+            <option selected="selected" value="zhangsan">A部门经理</option>
+            <option value="lisi">B部门经理</option>
+        </select><br/><br/>
+        <input type="submit" value="打开文件"/><br/><br/>
+        <div style=" color:Red;">不同的用户登录后，在文档中可以编辑的单元格区域不同</div>
+    </div>
+</form>
+</body>
+
+
+</html>

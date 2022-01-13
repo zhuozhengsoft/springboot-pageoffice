@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Word文件转换成PDF格式</title>
+    <script type="text/javascript">
+        //保存
+        function Save() {
+            document.getElementById("PageOfficeCtrl1").WebSave();
+        }
+
+        //另存为PDF文件
+        function SaveAsPDF() {
+            document.getElementById("PageOfficeCtrl1").WebSaveAsPDF();
+            document.getElementById("PageOfficeCtrl1").Alert("PDF文件已经保存到 SaveAsPDF/doc目录下。");
+            document.getElementById("div1").innerHTML = "<a href='pdf?fileName=template.pdf'> 查看另存的 pdf 文件<a><br><br>";
+        }
+    </script>
+
+</head>
+<body>
+<form id="form1">
+    <div id="div1"></div>
+    <div style="width: auto; height: 700px;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+
+</html>

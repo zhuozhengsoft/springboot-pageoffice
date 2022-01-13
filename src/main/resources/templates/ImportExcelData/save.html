@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<HEAD>
+    <title>SaveData</title>
+    <meta content="Microsoft Visual Studio .NET 7.1" name="GENERATOR">
+    <meta content="C#" name="CODE_LANGUAGE">
+    <meta content="JavaScript" name="vs_defaultClientScript">
+    <meta content="http://schemas.microsoft.com/intellisense/ie5" name="vs_targetSchema">
+
+</HEAD>
+<body>
+<div style=" border:solid 1px gray; ">
+    <div class="errTopArea" style="text-align: left;border-bottom:solid 1px gray;">
+        [提示标题：这是一个开发人员可自定义的对话框]
+    </div>
+    <div class="errTxtArea" style="height: 88%; text-align: left">
+        <b class="txt_title">
+            <div style="color: #FF0000;">
+                提交的信息如下：
+            </div>
+            <div th:utext="${content}">
+
+            </div>
+        </b>
+    </div>
+
+</div>
+</body>
+</html>

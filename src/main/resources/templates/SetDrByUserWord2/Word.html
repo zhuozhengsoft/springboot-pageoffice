@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+
+</head>
+<body>
+<script type="text/javascript">
+    //保存页面
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+
+    //全屏/还原
+    function IsFullScreen() {
+        document.getElementById("PageOfficeCtrl1").FullScreen = !document
+            .getElementById("PageOfficeCtrl1").FullScreen;
+    }
+</script>
+<div id="content">
+    <div id="textcontent" style="width: 1000px; height: 800px;">
+        <div class="flow4">
+            <a href="index"> 返回登录页</a>
+            <strong>当前用户：</strong>
+            <span style="color: Red;" th:utext="${userName}"><%=userName%></span>
+        </div>
+
+        <div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+        </div>
+
+
+    </div>
+</div>
+
+
+</body>
+
+</html>

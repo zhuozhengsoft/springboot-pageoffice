@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>最简单的打开保存Word文件</title>
+</head>
+<body>
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+
+    //文档关闭前先提示用户是否保存
+    function BeforeBrowserClosed() {
+        if (document.getElementById("PageOfficeCtrl1").IsDirty) {
+            if (confirm("提示：文档已被修改，是否继续关闭放弃保存 ？")) {
+                return true;
+
+            } else {
+
+                return false;
+            }
+        }
+    }
+</script>
+<form id="form1">
+    当前用户： <span th:utext="${userName}"></span>。
+    <div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+
+</html>

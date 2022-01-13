@@ -1,0 +1,142 @@
+A:link {
+    COLOR: #0000ff;
+    CURSOR: hand;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none
+}
+
+A:visited {
+    COLOR: #ff0000;
+    CURSOR: hand;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+}
+
+A:hover {
+    COLOR: #ff8000;
+    CURSOR: hand;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+}
+
+.Bard {
+    BACKGROUND-COLOR: #c0c0c0;
+    BORDER-BOTTOM: #c0c0c0 1px solid;
+    BORDER-LEFT: #c0c0c0 1px solid;
+    BORDER-RIGHT: #c0c0c0 1px solid;
+    BORDER-TOP: #c0c0c0 1px solid;
+    COLOR: #000000;
+    cursor: hand;
+
+}
+
+.Baru {
+    background-color: #c0c0c0;
+    color: #0000FF;
+    cursor: hand;
+    font-style: italic;
+    font-weight: bold;
+    border-left: 1px solid #ffffff;
+    border-right: 1px solid #000000;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #000000
+}
+
+.TBStyle {
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #000000 0px solid;
+    BORDER-LEFT: #000000 0px solid;
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    COLOR: #000000;
+}
+
+.TDStyle {
+    FONT-FAMILY: "����";
+    FONT-SIZE: 10pt;
+    TEXT-DECORATION: none;
+}
+
+.TDTitleStyle {
+    BACKGROUND-COLOR: menu;
+    BORDER-BOTTOM: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-RIGHT: #000000 0px solid;
+    BORDER-TOP: #000000 0px solid;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    COLOR: #3333CC;
+
+}
+
+.IptStyle {
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #000000 0px solid;
+    BORDER-LEFT: #000000 0px solid;
+    BORDER-RIGHT: #000000 0px solid;
+    BORDER-TOP: #000000 0px solid;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    WIDTH: 100%;
+    COLOR: red;
+
+}
+
+.IptInStyle {
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #000000 0px solid;
+    BORDER-LEFT: #000000 0px solid;
+    BORDER-RIGHT: #000000 0px solid;
+    BORDER-TOP: #000000 0px solid;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    WIDTH: 100%;
+    COLOR: #000000;
+}
+
+.IptOutStyle {
+    BACKGROUND-COLOR: #ffffff;
+    BORDER-BOTTOM: #000000 0px solid;
+    BORDER-LEFT: #000000 0px solid;
+    BORDER-RIGHT: #000000 0px solid;
+    BORDER-TOP: #000000 0px solid;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    WIDTH: 100%;
+    COLOR: red;
+}
+
+.DivStyle {
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    BORDER-BOTTOM: #000000 1px solid;
+    BORDER-LEFT: #000000 1px solid;
+    BORDER-RIGHT: #000000 1px solid;
+    BORDER-TOP: #000000 1px solid;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    overflow: auto;
+}
+
+.button {
+    BACKGROUND-COLOR: menu;
+    FONT-FAMILY: "����";
+    FONT-SIZE: 9pt;
+    TEXT-DECORATION: none;
+    COLOR: #000000;
+    WIDTH: 80;
+
+}

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+
+<head>
+    <title>后台编程插入Word文件到数据区域</title>
+
+</head>
+<body>
+<div style="font-size: 12px; line-height: 20px; border-bottom: dotted 1px #ccc; border-top: dotted 1px #ccc;
+        padding: 5px;">
+    关键代码：<span style="background-color: Yellow;"> <br/>DataRegion dataRegion
+            = worddoc.openDataRegion("PO_开头的书签名称");
+            <br/>
+            dataRegion.setValue("[word]doc/1.doc[/word]");</span><br/>
+</div>
+<br/>
+<form id="form1">
+    <div style="width: auto; height: 700px;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+</html>
