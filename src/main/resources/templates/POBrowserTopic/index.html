@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head id="Head1">
+    <title></title>
+    <link href="/css/POBrowserTopic/style.css" rel="stylesheet" type="text/css"/>
+    <!--PageOffice.js和jquery.min.js文件一定要引用-->
+    <script type="text/javascript" src="/jquery.min.js"></script>
+    <script type="text/javascript" src="/pageoffice.js" id="po_js_main"></script>
+    <script type="text/javascript">
+
+        function getText() {
+            //获取文本框的值，传递给result2
+            var iptValue = document.getElementById("ipt").value;
+            $.ajax({
+                type: "POST",  //提交方式
+                url: "Result2?param=" + iptValue,//路径
+                dataType: "text",
+                success: function (data) {//返回数据根据结果进行相应的处理
+                }
+            });
+
+        }
+
+    </script>
+
+</head>
+
+<body>
+<!--header-->
+<div class="zz-headBox br-5 clearfix" align="center">
+    <div class="zz-head mc">
+        <!--logo-->
+        <div class="logo fl">
+            <a href="#">
+                <img src="/images/POBrowserTopic/logo.png" alt=""/></a></div>
+        <!--logo end-->
+        <ul class="head-rightUl fr">
+            <li><a href="http://www.zhuozhengsoft.com">卓正网站</a></li>
+            <li><a href="http://www.zhuozhengsoft.com/Technical/">技术支持</a></li>
+            <li class="bor-0"><a href="http://www.zhuozhengsoft.com/about/about/">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+<!--header end-->
+<!--content-->
+<div class="zz-content mc clearfix pd-28" align="center">
+    <div class="demo mc">
+        <h2 class="fs-16">
+            POBrowser 专题</h2>
+    </div>
+
+    <div style="margin : 10px" align="center">
+        <table style="border-collapse:separate; border-spacing:20px; ">
+            <tr>
+                <td>1.POBrowser方式最简单的打开编辑保存文档：<a
+                        href="javascript:POBrowser.openWindowModeless('Word1' , 'width=1200px;height=800px;');">Word1.html</a>
+                </td>
+            </tr>
+            <tr>
+                <td>2.向POBrowser打开的页面传递参数1：<a
+                        href="javascript:POBrowser.openWindowModeless('Word2?id=1' , 'width=1200px;height=800px;');">Word2.html</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3.向POBrowser打开的页面传递参数2：<a
+                        href="javascript:POBrowser.openWindowModeless('Word3' , 'width=1200px;height=800px;');"
+                        onclick="getText()">Word3.html</a></td>
+            <tr>
+                <td>请输入值：
+                    <input type="text" id="ipt" value="1234"/>
+                <td>
+            </tr>
+        </table>
+
+    </div>
+
+</div>
+
+</body>
+
+</html>

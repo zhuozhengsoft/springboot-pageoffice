@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+/*************************************************
+* 文件名称：style.css                                    
+* 编写人：韩国强
+* 制作时间：2012.07.17
+* 联系方式：QQ：117103557  Email:hanguoqiang0@yeah.net 
+*************************************************/
+
+/*talbe style*/
+.zz-talbeBox {
+    width: 1120px;
+}
+
+.zz-talbeBox h2 {
+    height: 24px;
+    line-height: 24px;
+    padding-top: 10px;
+    color: #666;
+}
+
+.zz-talbe, .listpage, .listpage-700 {
+    width: 1120px;
+    clear: both;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-top: 1px solid #C2D8E2;
+    border-left: 1px solid #C2D8E2;
+}
+
+.listpage {
+    width: 790px;
+}
+
+.zz-talbe thead th {
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-indent: 10px;
+    padding: 0;
+    border-right: 1px solid #C2D8E2;
+    border-bottom: 1px solid #C2D8E2;
+    background: #eef;
+    font-weight: bold;
+    color: #666;
+}
+
+.zz-talbe thead th.text-cent {
+    text-align: center;
+    text-indent: 0px;
+}
+
+.zz-talbe tbody td.text-cent2 {
+    text-align: center;
+    text-indent: 0px;
+}
+
+.zz-talbe thead th.text-cent3 {
+    width: 688px;
+    text-align: left;
+}
+
+.zz-talbe tbody td {
+    word-break: normal;
+    height: 40px;
+    line-height: 40px;
+    text-align: left;
+    text-indent: 10px;
+    padding: 0;
+    border-right: 1px solid #C2D8E2;
+    border-bottom: 1px solid #C2D8E2;
+    color: #666;
+}
+
+.zz-talbe tbody td img {
+    margin-top: 10px;
+}
+
+.zz-talbe tbody td .ul-page {
+    overflow: hidden;
+    height: 16px;
+    line-height: 16px;
+    text-indent: 20px;
+    margin: 0 auto;
+}
+
+.zz-talbe tbody td .ul-page a {
+    color: #00517c;
+    margin: 0 5px;
+}
+
+.zz-talbe tbody td .ul-page a:hover {
+    color: #52a000;
+    text-decoration: underline;
+}
+
+.zz-talbe tbody td p {
+    color: #666;
+}
+
+.zz-talbe tbody td a:link {
+    text-decoration: underline;
+    color: #477ccc;
+}
+
+.zz-talbe tbody td a:hover {
+    text-decoration: underline;
+    color: #477ccc;
+}
+
+.zz-talbe tbody td a:visited {
+    text-decoration: underline;
+    color: #477ccc;
+}
+
+.zz-talbe.mt-30 {
+    margin-top: 30px;
+}
+
+#div_gaoji .zz-talbe tbody td p {
+    color: #eee;
+}
+
+#div_gaoji .zz-talbe tbody td {
+    color: #eee;
+}

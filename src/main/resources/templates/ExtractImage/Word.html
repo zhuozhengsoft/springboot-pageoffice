@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>保存时获取word文档中的图片</title>
+
+</head>
+<body>
+
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+        var value = document.getElementById("PageOfficeCtrl1").CustomSaveResult;
+        document.getElementById("PageOfficeCtrl1").Alert(value);
+    }
+</script>
+<div id="div1" style="width: auto; height: 700px;" th:utext="${pageoffice}">
+</div>
+
+</body>
+
+</html>

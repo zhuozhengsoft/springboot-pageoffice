@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>在word文档中光标处插入分页符</title>
+
+</head>
+<body>
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+        if (document.getElementById("PageOfficeCtrl1").CustomSaveResult == "ok") {
+            alert("保存成功！请在/Samples4/InsertPageBreak2/doc目录下查看合并后的新文档\"test3.doc\"。");
+        }
+    }
+
+</script>
+
+<div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+</div>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+
+
+</head>
+<body>
+
+<div id="content">
+    <div id="textcontent" style="width: 1000px; height: 800px;">
+        <div class="flow4">
+            <a href="index"> 返回登录页</a>
+            <span style=""> </span><strong>当前用户：</strong>
+            <span id="userName" style="color: Red;" th:utext="${userName}"></span>
+        </div>
+
+        <script type="text/javascript">
+            //保存页面
+            function Save() {
+                document.getElementById("PageOfficeCtrl1").WebSave();
+            }
+
+            //领导圈阅签字
+            function StartHandDraw() {
+                document.getElementById("PageOfficeCtrl1").HandDraw.Start();
+            }
+
+            /*
+            //分层显示手写批注
+            function ShowHandDrawDispBar() {
+                document.getElementById("PageOfficeCtrl1").HandDraw.ShowLayerBar(); ;
+            }*/
+
+            //全屏/还原
+            function IsFullScreen() {
+                document.getElementById("PageOfficeCtrl1").FullScreen = !document.getElementById("PageOfficeCtrl1").FullScreen;
+            }
+
+            //显示/隐藏用户的手写批注
+            function ShowByUserName() {
+                var userName = document.getElementById("userName").innerText; //从后台获取登录用户名
+                document.getElementById("PageOfficeCtrl1").HandDraw.ShowByUserName(null, false); // 隐藏所有的手写
+                document.getElementById("PageOfficeCtrl1").HandDraw.ShowByUserName(userName); // 显示Tom的手写，第二个参数为true时可省略
+            }
+
+        </script>
+
+        <!--**************   卓正 PageOffice组件 ************************-->
+        <div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+        </div>
+
+
+    </div>
+</div>
+
+</body>
+
+
+</html>

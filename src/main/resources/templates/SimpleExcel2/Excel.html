@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>最简单的打开保存Exce文件</title>
+</head>
+<body>
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+</script>
+<form id="form1">
+    <div style=" width:100%; height:700px;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+
+</html>

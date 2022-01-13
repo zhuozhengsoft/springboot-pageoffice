@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Word文档比较</title>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+    function SaveDocument() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+
+    function ShowFile1View() {
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.View.ShowRevisionsAndComments = false;
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.View.RevisionsView = 1;
+    }
+
+    function ShowFile2View() {
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.View.ShowRevisionsAndComments = false;
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.View.RevisionsView = 0;
+    }
+
+    function ShowCompareView() {
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.View.ShowRevisionsAndComments = true;
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.View.RevisionsView = 0;
+    }
+
+    function SetFullScreen() {
+        document.getElementById("PageOfficeCtrl1").FullScreen = !document.getElementById("PageOfficeCtrl1").FullScreen;
+    }
+</script>
+<div style="width:1000px; height:800px;" th:utext="${pageoffice}">
+</div>
+</body>
+
+</html>

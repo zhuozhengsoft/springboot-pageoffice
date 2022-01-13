@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title>XX文档系统</title>
+</head>
+<body>
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+    }
+
+    function CloseFile() {
+        window.external.close();
+    }
+
+    function BeforeBrowserClosed() {
+        if (document.getElementById("PageOfficeCtrl1").IsDirty) {
+            if (confirm("提示：文档已被修改，是否继续关闭放弃保存 ？")) {
+                return true;
+
+            } else {
+
+                return false;
+            }
+
+        }
+    }
+
+</script>
+
+<div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+</div>
+
+</body>
+</html>

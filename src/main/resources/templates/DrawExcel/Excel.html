@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>My 'index' starting page</title>
+</head>
+
+<body>
+<!-- *********************pageoffice组件的使用 **************************-->
+<script language="javascript" type="text/javascript">
+    //全屏
+    function SetFullScreen() {
+        document.getElementById("PageOfficeCtrl1").FullScreen = !document.getElementById("PageOfficeCtrl1").FullScreen;
+    }
+</script>
+<div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+</div>
+
+
+</body>
+
+</html>

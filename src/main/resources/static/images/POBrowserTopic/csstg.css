@@ -1,0 +1,240 @@
+
+body {
+    FONT-FAMILY: Verdana, Arial, Helvetica, Sans-Serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F3F3FA;
+    font-size: 12px;
+}
+
+/* ����img ���������ִ�ֱ���� */
+img {
+    vertical-align: middle;
+}
+
+#header {
+    background: #28333c;
+    color: White;
+    float: left;
+    width: 100%;
+
+}
+
+#footer {
+    padding: 10px 0;
+    margin-top: 10px;
+    color: #28333c;
+
+}
+
+#content {
+    BACKGROUND: #fff;
+    width: 1000px;
+    border-left: solid 1px #ccc;
+    border-right: solid 1px #ccc;
+    border-bottom: solid 1px #ccc;
+    padding-bottom: 30px;
+    margin: 1px auto;
+
+}
+
+#textcontent {
+    BACKGROUND: #fff;
+    height: 200px;
+    text-align: left;
+}
+
+#nav {
+    LEFT: 15em;
+    POSITION: absolute;
+    TOP: 1.6em
+}
+
+#ads {
+    BACKGROUND: #fff
+}
+
+#header A {
+    TEXT-DECORATION: none;
+    color: #eee;
+}
+
+#textcontent A {
+    COLOR: #030
+}
+
+#textcontent P {
+    margin: 20px 80px;
+}
+
+#footer p {
+    color: White;
+    text-align: center;
+}
+
+#footer a {
+    color: #28333c;
+    TEXT-DECORATION: none;
+}
+
+#ads {
+    TEXT-ALIGN: center
+}
+
+.flow1 {
+    margin: 10px 80px;
+    border-bottom: dotted 1px #ccc;
+    text-align: left;
+}
+
+.flow2 {
+    margin: 10px 80px;
+    border-bottom: dotted 1px #ccc;
+    padding: 20px 0;
+}
+
+.flow3 {
+    margin: 10px 80px;
+    vertical-align: middle;
+    font-size: 14px;
+    padding: 20px 0;
+    color: Maroon;
+}
+
+.flow4 {
+    margin: 0 5px;
+    vertical-align: middle;
+    padding: 15px 0;
+}
+
+/* �б���ʽ */
+#header ul {
+    float: right;
+    width: 300px;
+    margin: 2px;
+    padding: 0;
+}
+
+#header ul li {
+    width: 70px;
+    height: 30px;
+    float: left;
+    background-image: url(bt2.gif);
+    line-height: 30px;
+}
+
+UL {
+    margin: 10px 80px;
+}
+
+UL LI {
+    list-style-type: none;
+}
+
+LI {
+
+}
+
+/* �����ʽ */
+table {
+    /*BACKGROUND: url(teaser.gif) #eff4fb repeat-x;*/
+    BORDER-RIGHT: #686868 1px solid;
+    background-color: #ECFFFF;
+    BORDER-LEFT: #686868 1px solid;
+    COLOR: #333;
+    BORDER-COLLAPSE: collapse;
+    font-size: 12px;
+}
+
+td {
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 5px;
+    PADDING-TOP: 5px
+}
+
+th {
+    PADDING-RIGHT: 5px;
+    PADDING-LEFT: 5px;
+    PADDING-BOTTOM: 5px;
+    PADDING-TOP: 5px
+}
+
+CAPTION {
+    PADDING-RIGHT: 0px;
+    PADDING-LEFT: 0px;
+    FONT-WEIGHT: bold;
+    FONT-SIZE: 1.4em;
+    BACKGROUND: none transparent scroll repeat 0% 0%;
+    PADDING-BOTTOM: 0.5em;
+    TEXT-TRANSFORM: uppercase;
+    COLOR: #333;
+    PADDING-TOP: 0px;
+    TEXT-ALIGN: left
+}
+
+table a {
+    COLOR: #950000;
+    TEXT-DECORATION: none
+}
+
+table a:link {
+
+}
+
+table a:visited {
+    FONT-WEIGHT: normal;
+    COLOR: #950000;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+thead th {
+    BACKGROUND: url(llsh.gif) #333 repeat-x;
+    COLOR: #fff
+}
+
+tfoot th {
+    BACKGROUND: url(llsh.gif) #333 repeat-x;
+    COLOR: #fff
+}
+
+tfoot td {
+    BACKGROUND: url(llsh.gif) #333 repeat-x;
+    COLOR: #fff
+}
+
+tfoot td {
+    TEXT-ALIGN: right
+}
+
+tbody th {
+    BORDER-BOTTOM: #333 1px dotted
+}
+
+tbody td {
+    BORDER-BOTTOM: #333 1px dotted;
+    border-left: dotted 1px #ccc;
+    height: 24px;
+}
+
+tbody th {
+    WHITE-SPACE: nowrap
+}
+
+tbody th A {
+    COLOR: #333
+}
+
+.odd {
+
+}
+
+TBODY TR:hover {
+    BACKGROUND: #fafafa
+}
+
+/* ��ͷ */

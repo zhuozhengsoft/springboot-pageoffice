@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <link href="/css/TaoHong/csstg.css" rel="stylesheet" type="text/css"/>
+    <script type="text/javascript">
+        //初始加载模板列表
+        function load() {
+            if (getQueryString("mb") != null)
+                document.getElementById("templateName").value = getQueryString("mb");
+        }
+
+        //获取url参数
+        function getQueryString(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i");
+            var r = window.location.search.substr(1).match(reg);
+            if (r != null)
+                return unescape(r[2]);
+            else
+                return null;
+        }
+
+        //套红
+        function taoHong() {
+            var mb = document.getElementById("templateName").value;
+            alert(mb);
+            document.getElementById("form1").action = "taoHong?mb=" + mb;
+
+
+            document.forms[0].submit();
+        }
+
+        //保存并关闭
+        function saveAndClose() {
+            document.getElementById("PageOfficeCtrl1").WebSave();
+            window.external.close();
+        }
+    </script>
+</head>
+<body onload="load();">
+<div id="header">
+    <div style="float: left; margin-left: 20px;">
+        <img src="images/logo.jpg" height="30"/>
+    </div>
+    <ul>
+        <li>
+            <a target="_blank" href="http://www.zhuozhengsoft.com">卓正网站</a>
+        </li>
+        <li>
+            <a target="_blank"
+               href="http://www.zhuozhengsoft.com/poask/index.asp">客户问吧</a>
+        </li>
+        <li>
+            <a href="#">在线帮助</a>
+        </li>
+        <li>
+            <a target="_blank"
+               href="http://www.zhuozhengsoft.com/about/about/">联系我们</a>
+        </li>
+    </ul>
+</div>
+<div id="content">
+    <div id="textcontent" style="width: 1000px; height: 800px;">
+        <div class="flow4">
+            <a href="#" onclick="window.external.close();"> <img alt="返回" src="images/return.gif"
+                                                                 border="0"/>文件列表</a>
+            <span style="width: 100px;"> </span><strong>文档主题：</strong>
+            <span style="color: Red;">测试文件</span>
+            <form method="post" id="form1">
+                <strong>模板列表：</strong>
+                <span style="color: Red;"> <select name="templateName"
+                                                   id="templateName" style='width: 240px;'>
+								<option value='temp2008.doc' selected="selected">
+									模板一
+								</option>
+								<option value='temp2009.doc'>
+									模板二
+								</option>
+								<option value='temp2010.doc'>
+									模板三
+								</option>
+							</select> </span>
+                <span style="color: Red;"><input type="button" value="一键套红"
+                                                 onclick="taoHong()"/> </span>
+                <span style="color: Red;"><input type="button" value="保存关闭"
+                                                 onclick="saveAndClose()"/> </span>
+            </form>
+        </div>
+        <div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+        </div>
+
+
+    </div>
+</div>
+<div id="footer">
+    <hr width="1000"/>
+    <div>
+        Copyright (c) 2012 北京卓正志远软件有限公司
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+    <title></title>
+    <link href="/css/CreateWord/style.css" rel="stylesheet" type="text/css"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <!--PageOffice.js和jquery.min.js文件一定要引用-->
+    <script type="text/javascript" src="../jquery.min.js"></script>
+    <script type="text/javascript" src="../pageoffice.js" id="po_js_main"></script>
+    <script type="text/javascript">
+        function onColor(td) {
+            td.style.backgroundColor = '#D7FFEE';
+        }
+
+        function offColor(td) {
+            td.style.backgroundColor = '';
+        }
+
+        function getFocus() {
+            var str = document.getElementById("FileSubject").value;
+            if (str == "请输入文档主题") {
+                document.getElementById("FileSubject").value = "";
+            }
+
+        }
+
+        function lostFocus() {
+            var str = document.getElementById("FileSubject").value;
+            if (str.length <= 0) {
+                document.getElementById("FileSubject").value = "请输入文档主题";
+            }
+        }
+
+        function freshIndex() {
+            window.location.href = "word-lists";
+        }
+    </script>
+
+
+</head>
+<body style=" text-align:center;">
+
+<!--header-->
+<div class="zz-headBox br-5 clearfix">
+    <div class="zz-head mc">
+        <!--logo-->
+        <div class="logo fl">
+            <a href="home.html">
+                <img src="../images/logo.png" alt=""/></a></div>
+        <!--logo end-->
+        <ul class="head-rightUl fr">
+            <li><a href="http://www.zhuozhengsoft.com">卓正网站</a></li>
+            <li class="bor-0"><a href="http://www.zhuozhengsoft.com">联系我们</a></li>
+        </ul>
+    </div>
+</div>
+<!--header end-->
+<!--content-->
+<div class="zz-content mc clearfix pd-28">
+    <div class="demo mc">
+        <h2 class="fs-16">
+            PageOffice 两种创建新文档的方式</h2>
+    </div>
+    <div class="demo mc" style="text-align:left;">
+        <h3 class="fs-12">
+            新建文件</h3>
+        <form id="form1" method="post" action="word-lists?op=create">
+            <table class="text" cellspacing="0" cellpadding="0" border="0">
+                <tr>
+                    <td style="font-size: 9pt" align="left">
+                        方法1：通过复制文件创建新文件
+                    </td>
+                    <td align="center">
+                        <input name="FileSubject" id="FileSubject" type="text" onfocus="getFocus()" onblur="lostFocus()"
+                               class="boder" style="width: 180px;" value="请输入文档主题"/>
+                    </td>
+                    <td style="width: 221px;">
+                        &nbsp;
+                        <input type="submit" value="创建文件" style=" width:86px;"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3">&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>
+                        方法2：利用属性WebCreateNew创建新文件&nbsp;&nbsp;
+                    </td>
+                    <td>
+                        &nbsp;<a
+                            href="javascript:POBrowser.openWindowModeless('creatWord' , 'width=1200px;height=800px;')"
+                            style=" color:Blue; text-decoration:underline;">新建文件</a>
+                    </td>
+                    <td style="width: 221px;">
+                        &nbsp;&nbsp;
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+    <div class="zz-talbeBox mc">
+        <h2 class="fs-12">
+            文档列表</h2>
+        <table class="zz-talbe">
+            <thead>
+            <tr>
+                <th width="22%">
+                    文档名称
+                </th>
+                <th width="10%">
+                    创建日期
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+
+
+            <tr th:each="doc:${list}" onmouseover='onColor(this)' onmouseout='offColor(this)'>
+                <td><a th:text="${doc.subject}"
+                       th:href="@{'javascript:POBrowser.openWindowModeless(\'Word?id='+${doc.id}+'\', \'width=1200px;height=800px;\')'}">请输入文档主题</a>
+                </td>
+
+
+                <td th:text="${doc.submitTime}"><a href=""></a></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<!--content end-->
+<!--footer-->
+<div class="login-footer clearfix">
+    Copyright &copy 2012 北京卓正志远软件有限公司
+</div>
+<!--footer end-->
+
+
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>Word文件另存为HTML</title>
+
+</head>
+<body>
+<script type="text/javascript">
+    function saveAsHTML() {
+        document.getElementById("PageOfficeCtrl1").WebSaveAsHTML();
+        document.getElementById("PageOfficeCtrl1").Alert("HTML格式的文件已经保存到 SaveAsHTML/doc 目录下。");
+        document.getElementById("div1").innerHTML = "<a href='doc/test.htm?r=" + Math.random() + "'> 查看另存的html文件<a><br><br>";
+    }
+</script>
+<form id="form1">
+    <div id="div1"></div>
+    <div style=" width:1000px; height:800px;" th:utext="${pageoffice}">
+    </div>
+</form>
+</body>
+
+</html>

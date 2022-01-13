@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+</head>
+<body>
+<script type="text/javascript">
+    function Close() {
+        window.external.close();
+    }
+
+    function increaseCount(value) {
+        var sResult = window.external.CallParentFunc("updateCount(" + value + ");");
+        if (sResult == 'poerror:parentlost') {
+            alert('父页面关闭或跳转刷新了，导致父页面函数没有调用成功！');
+            return false;
+        }
+        document.getElementById("PageOfficeCtrl1").Alert("现在父窗口Count的值为：" + sResult);
+    }
+
+    function increaseCountAndClose(value) {
+        var sResult = window.external.CallParentFunc("updateCount(" + value + ");");
+        if (sResult == 'poerror:parentlost') {
+            alert('父页面关闭或跳转刷新了，导致父页面函数没有调用成功！');
+        }
+        window.external.close();
+    }
+</script>
+
+<input type="button" value="设置父窗口Count的值加1" onclick="increaseCount(1);"/>
+<input type="button" value="设置父窗口Count的值加5，并关闭窗口" onclick="increaseCountAndClose(5);"/></br>
+<div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+
+</div>
+
+</body>
+</html>

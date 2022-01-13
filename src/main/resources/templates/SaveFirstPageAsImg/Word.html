@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>保存Word首页为图片</title>
+
+</head>
+<body>
+<script type="text/javascript">
+    function Save() {
+        document.getElementById("PageOfficeCtrl1").WebSave();
+        if (document.getElementById("PageOfficeCtrl1").CustomSaveResult == "ok") {
+            document.getElementById("PageOfficeCtrl1").Alert("文档保存成功!");
+        }
+    }
+
+    function SaveFirstAsImg() {
+        document.getElementById("PageOfficeCtrl1").WebSaveAsImage();
+        if (document.getElementById("PageOfficeCtrl1").CustomSaveResult == "ok") {
+            document.getElementById("PageOfficeCtrl1").Alert("图片保存成功!");
+            document.getElementById("img1").src = "images/test.jpg";
+            document.getElementById("img1").style.width = "200px";
+            document.getElementById("img1").style.height = "290px";
+        }
+    }
+</script>
+<div><img id="img1"/></div>
+<div style="width:auto; height:700px;" th:utext="${pageoffice}">
+</div>
+</body>
+
+</html>

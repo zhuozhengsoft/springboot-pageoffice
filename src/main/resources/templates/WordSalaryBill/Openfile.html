@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title></title>
+    <script type="text/javascript">
+        function Save() {
+            document.getElementById("PageOfficeCtrl1").WebSave();
+        }
+    </script>
+</head>
+<body>
+<a href="#" onclick="window.external.close();">返回列表页</a>
+<form id="form1">
+    <div style="width: auto; height: 600px;" th:utext="${pageoffice}">
+
+    </div>
+</form>
+</body>
+</html>

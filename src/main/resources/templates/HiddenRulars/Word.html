@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+    <title>显示/隐藏标尺</title>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+
+</head>
+
+<body>
+<script type="text/javascript" language="javascript">
+    //显示/隐藏标尺
+    function Hidden() {
+        document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.ActivePane.DisplayRulers =
+            !document.getElementById("PageOfficeCtrl1").Document.ActiveWindow.ActivePane.DisplayRulers;
+    }
+
+</script>
+
+<div style=" width:auto; height:700px;" th:utext="${pageoffice}">
+</div>
+</body>
+
+</html>
