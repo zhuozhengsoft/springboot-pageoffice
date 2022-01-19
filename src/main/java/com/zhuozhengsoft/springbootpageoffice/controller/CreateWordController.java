@@ -86,7 +86,6 @@ public class CreateWordController {
             return new ModelAndView("redirect:/CreateWord/word-lists");
         }
 
-
         Class.forName("org.sqlite.JDBC");
         String strUrl = "jdbc:sqlite:" + ResourceUtils.getURL("classpath:").getPath() + "static/demodata/CreateWord.db";
 
@@ -120,24 +119,16 @@ public class CreateWordController {
         stmt.close();
         conn.close();
 
-
         map.put("list", list);
-
-
         //--- PageOffice的调用代码 结束 -----
         ModelAndView mv = new ModelAndView("CreateWord/list");
-
-
         return mv;
     }
-
 
     @RequestMapping(value = "Word", method = RequestMethod.GET)
     public ModelAndView showWord(HttpServletRequest request, Map<String, Object> map) throws ClassNotFoundException, FileNotFoundException, SQLException {
         String subject = "";
         String fileName = "";
-
-
         Class.forName("org.sqlite.JDBC");
         String strUrl = "jdbc:sqlite:" + ResourceUtils.getURL("classpath:").getPath() + "static/demodata/CreateWord.db";
         Connection conn = DriverManager.getConnection(strUrl);
@@ -158,12 +149,8 @@ public class CreateWordController {
         //隐藏菜单栏
         poCtrl.setMenubar(false);
         poCtrl.addCustomToolButton("保存", "Save()", 1);
-
-
         //设置保存页面
         poCtrl.setSaveFilePage("save");//设置处理文件保存的请求方法
-
-
         //打开Word文档
         poCtrl.webOpen("/doc/CreateWord/" + fileName, OpenModeType.docNormalEdit, "张三");
         map.put("pageoffice", poCtrl.getHtmlCode("PageOfficeCtrl1"));
@@ -244,8 +231,6 @@ public class CreateWordController {
     @RequestMapping("save")
     public void save(HttpServletRequest request, HttpServletResponse response) {
         FileSaver fs = new FileSaver(request, response);
-
-
         fs.saveToFile(dir + "CreateWord/" + fs.getFileName());
         fs.close();
     }
