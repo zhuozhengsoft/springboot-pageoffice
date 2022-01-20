@@ -11,9 +11,9 @@
     <groupId>com.zhuozhengsoft</groupId>
     <artifactId>springboot-pageoffice</artifactId>
     <version>5.3.0.3-SNAPSHOT</version>
-    <packaging>war</packaging>
+    <packaging>jar</packaging>
     <name>springboot-pageoffice</name>
-    <description>PageOffice Demo project for Spring Boot</description>
+    <description>PageOffice Demo For SpringBoot</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
@@ -58,12 +58,8 @@
     <build>
         <plugins>
             <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <!--maven打包编译时跳过测试用例-->
-                <configuration>
-                    <skipTests>true</skipTests>
-                </configuration>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
     </build>

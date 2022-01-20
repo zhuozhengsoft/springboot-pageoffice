@@ -7,7 +7,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
     <!--PageOffice.js和jquery.min.js文件一定要引用-->
     <script type="text/javascript" src="../jquery.min.js"></script>
-    <script type="text/javascript" src="../pageoffice.js" id="po_js_main"></script>
+    <script type="text/javascript" src="../pageoffice.js"></script>
     <script type="text/javascript">
         function onColor(td) {
             td.style.backgroundColor = '#D7FFEE';
@@ -67,7 +67,7 @@
             新建文件</h3>
         <form id="form1" method="post" action="word-lists?op=create">
             <table class="text" cellspacing="0" cellpadding="0" border="0">
-                <tr>
+               <!-- <tr>
                     <td style="font-size: 9pt" align="left">
                         方法1：通过复制文件创建新文件
                     </td>
@@ -79,13 +79,13 @@
                         &nbsp;
                         <input type="submit" value="创建文件" style=" width:86px;"/>
                     </td>
-                </tr>
+                </tr>-->
                 <tr>
                     <td colspan="3">&nbsp;</td>
                 </tr>
                 <tr>
                     <td>
-                        方法2：利用属性WebCreateNew创建新文件&nbsp;&nbsp;
+                      利用属性WebCreateNew创建新文件&nbsp;&nbsp;
                     </td>
                     <td>
                         &nbsp;<a
@@ -118,7 +118,9 @@
 
             <tr th:each="doc:${list}" onmouseover='onColor(this)' onmouseout='offColor(this)'>
                 <td><a th:text="${doc.subject}"
-                       th:href="@{'javascript:POBrowser.openWindowModeless(\'Word?id='+${doc.id}+'\', \'width=1200px;height=800px;\')'}">请输入文档主题</a>
+                        href="#"
+                       th:onclick="'javascript:POBrowser.openWindowModeless(\'Word?id='+${doc.id}+'\', \'width=1200px;height=800px;\')'">
+                </a>
                 </td>
 
 
