@@ -21,7 +21,7 @@
 ​     PageOfficeV5.0标准版试用序列号：I2BFU-MQ89-M4ZZ-ZWY7K           
 ​     PageOfficeV5.0专业版试用序列号：DJMTF-HYK4-BDQ3-2MBUC
 ### 三、集成PageOffice到您的项目中的关键步骤
-   1.在您项目的pom.xml中通过下面的代码引入PageOffice依赖。
+1. 在您项目的pom.xml中通过下面的代码引入PageOffice依赖。
 
 ```
 <dependency>
@@ -89,12 +89,14 @@ public class PageOfficeController {
 
 ### 八、技术支持
 
-​    PageOffice开发帮助：
+​     PageOffice开发帮助：
 
-1. [Java API文档](http://www.zhuozhengsoft.com/help/java3/index.html) 
-2. [JS API文档](http://www.zhuozhengsoft.com/help/js3/index.html)  
-3. [PageOffice从入门到精通](https://www.kancloud.cn/pageoffice_course_group/pageoffice_course/646953)
+​     1.[Java API文档](http://www.zhuozhengsoft.com/help/java3/index.html) 
 
-   官网：[http://www.zhuozhengsoft.com](http://www.zhuozhengsoft.com)
+​     2.[JS API文档](http://www.zhuozhengsoft.com/help/js3/index.html)  
 
-   电话：010-84721198
+​     3.[PageOffice从入门到精通](https://www.kancloud.cn/pageoffice_course_group/pageoffice_course/646953)
+
+​    卓正官网：[http://www.zhuozhengsoft.com](http://www.zhuozhengsoft.com)
+
+​    联系电话：010-84721198
