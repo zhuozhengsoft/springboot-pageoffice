@@ -51,7 +51,7 @@ public class SpringbootPageofficeApplication {
         com.zhuozhengsoft.pageoffice.poserver.AdminSeal adminSeal = new com.zhuozhengsoft.pageoffice.poserver.AdminSeal();
         adminSeal.setAdminPassword(poPassword);//设置印章管理员admin的登录密码（为了安全起见，强烈建议修改此密码）
         /**如果当前项目是打成jar或者war包运行，强烈建议将poseal.db文件的路径更换成某个固定的绝对路径下,不要放当前项目文件夹下,为了防止每次重新打包程序导致poseal.db被替换的问题。
-         * 比如windows服务器下：D:/pageoffice/，linux服务器下:/root/pageoffice/
+         * 比如windows服务器下：D:/pageoffice，linux服务器下:/root/pageoffice
          */
         //设置印章数据库文件poseal.db存放的目录
         adminSeal.setSysPath(poSysPath);//poSysPath可以在application.properties这个文件中配置，也可以直设置文件夹路径，比如：poserver.setSysPath("D:/pageoffice");

@@ -82,7 +82,7 @@ public class PageOfficeController {
 
 ​     1.请在您的web项目的启动类Application类中加上印章功能相关配置代码，具体代码请参考当前项目springboot-pageoffice启动类中电子印章功能配置代码，此处不再赘述。
 
-> ​    注意：adminSeal.setSysPath(poSysPath)中的SysPath指向的地址必须是您当前项目license.lic文件所在的目录。
+> ​    注意：adminSeal.setSysPath(poSysPath)中的poSysPath指向的地址必须是您当前项目license.lic文件所在的目录。
 
 ​    2.请拷贝当前项目根目录下poseal.db文件到您的web项目的license.lic文件所在的文件夹下。
 
