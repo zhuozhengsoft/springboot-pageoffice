@@ -24,6 +24,8 @@
 ### 六、集成PageOffice到您的项目中的关键步骤
 1. 在您项目的pom.xml中通过下面的代码引入PageOffice依赖。
 
+   > pageoffice.jar的所有Releases版本都已上传到了Maven中央仓库，具体您要引用哪个版本请在Maven中央仓库地址中查看，建议使用Maven中央仓库中pageoffice.jar的最新版本。(Maven中央仓库中pageoffice.jar的地址：https://mvnrepository.com/artifact/com.zhuozhengsoft/pageoffice)
+
 ```
 <dependency>
      <groupId>com.zhuozhengsoft</groupId>   
