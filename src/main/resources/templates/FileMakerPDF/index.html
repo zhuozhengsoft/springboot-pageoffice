@@ -1,36 +1,36 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
       xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
-
 <head>
-    <title></title>
-
+    <meta charset="UTF-8">
+    <title>word转pdf</title>
+    <!--pageoffice.js一定要引用--->
+    <script type="text/javascript" src="../pageoffice.js"></script>
     <script type="text/javascript">
-        window.myFunc = function () {
-            document.getElementById("aDiv").style.display = "";
-            //alert('转换完毕！');
-        };
+        function  myFunc(type){
+            alert("转换完成！");
+            document.getElementById("pgImg").style.display="none";
+            if("1"==type){
+                //下载生成的pdf文件
+                location.href="DownPDF";
+            }else if("2"==type){
+                //打开pdf文件
+                POBrowser.openWindowModeless('OpenPDF' , 'width=1200px;height=800px;');
+            }
 
-        function ConvertFiles() {
-            document.getElementById("iframe1").src = "Word";
+        }
+        function convert(type) {
+            document.getElementById("pgImg").style.display="block";
+            POBrowser.openWindowModeless('FileMaker?type='+type , 'width=1px;height=1px;frame=no;');
         }
     </script>
-
 </head>
-<body>
-<form id="form1">
-    <div style="text-align: center;">
-        <br/>
-        <span style="color: Red; font-size: 12px;">演示：把数据填充到word模板中生成 PDF 文件，请点下面的按钮进行转换</span><br/>
-        <input id="Button1" type="button" value="转换Word文件为 PDF" onclick="ConvertFiles()"/>
-        <div id="aDiv" style="display: none; color: Red; font-size: 12px;">
-            <span>转换完成，可在下面的地址中打开文件名为“maker.pdf”的 PDF 文件，查看转换的效果：<span th:utext="${url}"></span></span>
-        </div>
-    </div>
-    <div style="width: 1px; height: 1px; overflow: hidden;">
-        <iframe id="iframe1" name="iframe1" src=""></iframe>
-    </div>
-</form>
+<body style="text-align: center;">
+<a  href="javascript:;" onclick="convert(1)">1.Word文件转PDF文件并下载PDF文件</a><br><br>
+<a  href="javascript:;" onclick="convert(2)">2.Word文件转PDF文件并打开PDF文件</a>
+<div id="pgImg" style="with:100px;height:100px;margin-top:20px;display: none;"  >
+    正在转换文件，请稍等：<img src="/images/FileMakerSingle/pg.gif">
+</div>
 </body>
 
 </html>

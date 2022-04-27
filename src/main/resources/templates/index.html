@@ -71,31 +71,33 @@
     </div>
     <!--/.container-->
 </header>
+<!--/.header-->
+<div id="#top"></div>
 <section id="home" class="page-section">
     <div class="banner-container">
         <div class="container banner-content">
             <div id="da-slider" class="da-slider">
                 <div class="da-slide">
                     <h2>PAGEOFFICE V5.0重磅来袭！</h2>
-                    <p>PageOffice基于在线Office的100余项功能，让用户更轻松高效的进行文档协同办公！</p>
+                    <p>PAGEOFFICE基于在线Office的100余项功能，让用户更轻松高效的进行文档协同办公！</p>
                     <a href="http://www.zhuozhengsoft.com/about/about/" target="_blank" class="da-link button-outline">联系我们</a>
                     <div class="da-img"></div>
                 </div>
                 <div class="da-slide">
                     <h2>新功能一</h2>
-                    <p>PageOffice V5.0产品用户界面简洁大方，完美支持高分屏显示效果！</p>
+                    <p>全新的扁平化按钮图标界面！</p>
                     <a href="http://www.zhuozhengsoft.com/about/about/" target="_blank" class="da-link button-outline">联系我们</a>
                     <div class="da-img"></div>
                 </div>
                 <div class="da-slide">
                     <h2>新功能二</h2>
-                    <p>实现所有浏览器弹出PageOffice窗口时，不再出现询问是否打开的确认框，简化操作步骤，大大提高了用户使用体验!</p>
+                    <p>更完美支持高分屏，扩展屏下打开PageOffice的效果！</p>
                     <a href="http://www.zhuozhengsoft.com/about/about/" target="_blank" class="da-link button-outline">联系我们</a>
                     <div class="da-img"></div>
                 </div>
                 <div class="da-slide">
                     <h2>新功能三</h2>
-                    <p>新增支持ASP.NET Core3.0！</p>
+                    <p>更完美地支持POBrowser！</p>
                     <a href="http://www.zhuozhengsoft.com/about/about/" target="_blank" class="da-link button-outline">联系我们</a>
                     <div class="da-img"></div>
                 </div>
@@ -108,7 +110,6 @@
     </div>
     <!--/.container-->
 </section>
-
 
 <section id="describe" class="page-section pDark pdingBtm30">
     <div class="container">
@@ -176,15 +177,16 @@
                 <tr>
                     <td><img src="images/office-1.png"/></td>
                     <td>七、1、<a
-                            href="javascript:POBrowser.openWindowModeless('CommentOnly/Word',  'width=1150px;height=900px;');">在Word文件只读的情况下向Word文件中插入键盘批注</a>
+                            href="javascript:POBrowser.openWindowModeless('CommentOnly/Word',  'width=1150px;height=900px;');">在Word文件只读的情况下向Word文件中插入键盘批注</a><span
+                            style=" color:Red;">（企业版）</span>
                         <p>演示WebOpen方法的第二个参数使用docCommentOnly，第三个参数传用户名，在Word文件只读的情况下向Word文件中插入键盘批注。</p>
                     </td>
                     <td>/CommentOnly</td>
                 </tr>
                 <tr>
                     <td><img src="images/office-1.png"/></td>
-                    <td>七、2、<a
-                            href="javascript:POBrowser.openWindowModeless('OnWordSelectionChange/Word',  'width=1150px;height=900px;');">OnWordSelectionChange事件的使用</a><span
+                    <td>七、3、<a
+                            href="javascript:POBrowser.openWindowModeless('OnWordSelectionChange/Word',  'width=1150px;height=900px;');">OnWordSelectionChange事件的使用。</a><span
                             style=" color:Red;">（企业版）</span>
                         <p>演示OnWordSelectionChange事件的使用，在Word选中区域内容发生改变或者光标插入位置发生改变时触发。</p>
                     </td>
@@ -216,9 +218,10 @@
                 <tr>
                     <td><img src="images/office-1.png"/></td>
                     <td>一、1、<a
-                            href="javascript:POBrowser.openWindowModeless('SimpleWord/Word', 'width=1050px;height=900px;');">最简单在线打开保存Word文件（URL地址方式）</a>
+                            href="javascript:POBrowser.openWindowModeless('/SimpleWord/Word', 'width=1050px;height=900px;');">最简单在线打开保存Word文件（URL地址方式）</a>
                         <p>
-                            演示PageOffice实现最基本的在线打开保存服务器上Word文件的功能，也是最简单的一个集成PageOffice的示例，第一次接触PageOffice产品的用户可以参考此示例把PageOffice集成到自己的项目中。</p></td>
+                            演示PageOffice实现最基本的在线打开保存服务器上Word文件的功能，也是最简单的一个集成PageOffice的示例，第一次接触PageOffice产品的用户可以参考此示例把PageOffice集成到自己的项目中。<span
+                                style="color:red;">（此示例同时演示了使用参数控制在线打开文件的窗口大小并在屏幕居中显示。）</span></p></td>
                     <td>/SimpleWord</td>
                 </tr>
                 <tr>
@@ -641,7 +644,7 @@
                 <tr>
                     <td><img src="images/office-1.png"/></td>
                     <td>二、13、<a
-                            href="javascript:POBrowser.openWindowModeless('FileMakerSingle/index' , 'width=1200px;height=800px;');">FileMaker转换单个文档（以Word为例）</a><span
+                            href="FileMakerSingle/index" target="_blank">FileMaker转换单个文档（以Word为例）</a><span
                             style=" color:Red;">（专业版、企业版）</span>
                         <p>演示使用FileMaker对象动态生成文件的效果。虽然还是在客户端生成文件后保存到服务器上的，但是不在客户端显式的打开文件。</p>
                     </td>
@@ -831,7 +834,7 @@
                 <tr>
                     <td><img src="images/pdf.jpg"/></td>
                     <td>二、34、<a
-                            href="javascript:POBrowser.openWindowModeless('FileMakerPDF/index' , 'width=1200px;height=800px;');">FileMaker转换单个文档为PDF（以Word为例） </a><span
+                            href="FileMakerPDF/index" target="_blank">FileMaker转换单个文档为PDF（以Word为例） </a><span
                             style=" color:Red;">（专业版、企业版）</span>
                         <p>演示使用FileMaker对象动态生成 PDF 文件的效果。虽然还是在客户端生成PDF文件后保存到服务器上的，但是不在客户端显式的打开文件。</p>
                     </td>
@@ -1037,18 +1040,10 @@
                     </td>
                     <td>/InsertImageSetSize</td>
                 </tr>
-                <tr>
-                    <td><img src="images/office-1.png"/></td>
-                    <td>二、57、<a
-                            href="javascript:POBrowser.openWindowModeless('RunMacroForDocm/Word' , 'width=1055px;height=900px;');">通过RunMarco直接调用word或者excel文件中的宏命令（以docm文件为例）</a><span
-                            style=" color:Red;">（专业版、企业版）</span>
-                        <p>通过RunMarco直接调用word或者excel文件中的宏命令。</p>
-                    </td>
-                    <td>/RunMacroForDocm</td>
-                </tr>
                 </tbody>
             </table>
         </div>
+
 
     </div>
 </div>
