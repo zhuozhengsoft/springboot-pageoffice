@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
+<head>
+
+    <title>My 'FileMaker.html' starting page</title>
+
+    <meta http-equiv="pragma" content="no-cache">
+    <meta http-equiv="cache-control" content="no-cache">
+    <meta http-equiv="expires" content="0">
+    <meta http-equiv="keywords" content="keyword1,keyword2,keyword3">
+    <meta http-equiv="description" content="This is my page">
+    <!--
+<link rel="stylesheet" type="text/css" href="styles.css">
+-->
+
+</head>
+
+<body>
+<script language="javascript" type="text/javascript">
+    function OnProgressComplete() {
+        var type=document.getElementById("dom1").getAttribute("value");
+
+        window.external.CallParentFunc("myFunc("+type+");"); //调用父页面的js函数
+        window.external.close();//关闭POBrwoser窗口
+    }
+</script>
+
+<div id="dom1" th:utext="${pageoffice}"  th:value="${type}">
+
+
+</div>
+
+</body>
+</html>
