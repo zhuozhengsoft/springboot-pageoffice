@@ -48,10 +48,11 @@
         </dependency>
 
         <!--Pageoffice的jar已经打包到maven中央仓库，用下面的方式即可引用 -->
+
         <dependency>
             <groupId>com.zhuozhengsoft</groupId>
             <artifactId>pageoffice</artifactId>
-            <version>5.3.0.3</version>
+            <version>5.4.0.1</version>
         </dependency>
     </dependencies>
 
