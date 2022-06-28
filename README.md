@@ -92,17 +92,17 @@ public class PageOfficeController {
 
 ### 八、 PageOffice开发帮助
 
-​     1.[Java API文档](http://www.zhuozhengsoft.com/help/java3/index.html) 
+​     1.[Java API文档](https://www.zhuozhengsoft.com/help/java3/index.html) 
 
-​     2.[JS API文档](http://www.zhuozhengsoft.com/help/js3/index.html)  
+​     2.[JS API文档](https://www.zhuozhengsoft.com/help/js3/index.html)  
 
 ​     3.[PageOffice从入门到精通](https://www.kancloud.cn/pageoffice_course_group/pageoffice_course/646953)
 
-​     技术支持：http://www.zhuozhengsoft.com/Technical/
+​     技术支持：https://www.zhuozhengsoft.com/Technical/
 
 ### 九、联系我们
 
-​   卓正官网：[http://www.zhuozhengsoft.com](http://www.zhuozhengsoft.com)
+​   卓正官网：[https://www.zhuozhengsoft.com](http://www.zhuozhengsoft.com)
 
 ​   联系电话：400-6600-770  
 
