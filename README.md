@@ -26,7 +26,7 @@
 
    > pageoffice.jar的所有Releases版本都已上传到了Maven中央仓库，具体您要引用哪个版本请在Maven中央仓库地址中查看，建议使用Maven中央仓库中pageoffice.jar的最新版本。(Maven中央仓库中pageoffice.jar的地址：https://mvnrepository.com/artifact/com.zhuozhengsoft/pageoffice)
 
-```
+```xml
 <dependency>
      <groupId>com.zhuozhengsoft</groupId>   
   <artifactId>pageoffice</artifactId>   
@@ -36,7 +36,7 @@
 
 2. 在您项目的启动类Application类中配置如下代码。
 
-```
+```java
 @Bean
    public ServletRegistrationBean pageofficeRegistrationBean()  {
 com.zhuozhengsoft.pageoffice.poserver.Server poserver = new com.zhuozhengsoft.pageoffice.poserver.Server();
@@ -58,7 +58,7 @@ return srb;
 
   3.新建Controller并调用PageOffice，例如：
 
-```
+```java
 public class PageOfficeController {
 @RequestMapping(value = "/Word", method = RequestMethod.GET)
   public ModelAndView showWord(HttpServletRequest request) {
@@ -74,9 +74,21 @@ public class PageOfficeController {
 
    4.新建View页面,例如：Word.html（PageOfficeCtroller返回的View页面，用来嵌入PageOffice控件)，PageOffice在View页面输出的代码如下：
 
-```
+```javascript
 <div style="width: auto; height: 700px;" th:utext="${pageoffice}">
 ```
+
+  5.在要打开文件的页面的<head>标签中先引用pageoffice.js文件后，再调用POBrowser.openWindowModeless()方法打开文件，例如：
+
+```javascript
+<!--pageoffice.js的引用路径来自于第2步的项目启动类中的配置路径，一般将此js配置到了当前项目的根目录下 --->
+<script type="text/javascript" src="pageoffice.js"></script>
+
+<!--openWindowModeless()方法的第一个参数指向的url路径是指调用pageoffice打开文件的controller路径，比如下面的"SimpleWord/Word"--->
+<a href="javascript:POBrowser.openWindowModeless('SimpleWord/Word', 'width=1050px;height=900px;');">最简单在线打开保存Word文件（URL地址方式）</a>
+```
+
+
 
 ### 七、电子印章功能说明
 
