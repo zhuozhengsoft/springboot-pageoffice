@@ -85,7 +85,7 @@ public class PageOfficeController {
 <script type="text/javascript" src="pageoffice.js"></script>
 
 <!--openWindowModeless()方法的第一个参数指向的url路径是指调用pageoffice打开文件的controller路径,比如下面的"SimpleWord/Word"-->
-<a href="javascript:POBrowser.openWindowModeless('SimpleWord/Word', 'width=1050px;height=900px;');">最简单在线打开保存Word文件（URL地址方式）</a>
+<a href="javascript:POBrowser.openWindowModeless('SimpleWord/Word', 'width=1050px;height=900px;');">最简单在线打开保存Word文件(URL地址方式)</a>
 ```
 
 
