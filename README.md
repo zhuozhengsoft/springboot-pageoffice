@@ -78,7 +78,7 @@ public class PageOfficeController {
 <div style="width: auto; height: 700px;" th:utext="${pageoffice}">
 ```
 
-  5.在要打开文件的页面的<head>标签中先引用pageoffice.js文件后，再调用POBrowser.openWindowModeless()方法打开文件，例如：
+  5.在要打开文件的页面的head标签中先引用pageoffice.js文件后，再调POBrowser.openWindowModeless()方法打开文件，例如：
 
 ```javascript
 <!--pageoffice.js的引用路径来自于第2步的项目启动类中的配置路径，一般将此js配置到了当前项目的根目录下 --->
