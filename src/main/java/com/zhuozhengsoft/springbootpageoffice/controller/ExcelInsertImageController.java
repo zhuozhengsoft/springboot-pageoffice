@@ -30,7 +30,7 @@ public class ExcelInsertImageController {
         //打开Word文档
         poCtrl.webOpen("/doc/ExcelInsertImage/test.xls", OpenModeType.xlsNormalEdit, "张三");
         map.put("pageoffice", poCtrl.getHtmlCode("PageOfficeCtrl1"));
-        ModelAndView mv = new ModelAndView("ExcelInsertImage/Word");
+        ModelAndView mv = new ModelAndView("ExcelInsertImage/Excel");
         return mv;
     }
 
