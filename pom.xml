@@ -51,7 +51,7 @@
         <dependency>
             <groupId>com.zhuozhengsoft</groupId>
             <artifactId>pageoffice</artifactId>
-            <version>5.4.0.3</version>
+            <version>5.4.0.8</version>
         </dependency>
     </dependencies>
 
